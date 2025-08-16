@@ -41,7 +41,7 @@
   environment.systemPackages = with pkgs; [
     brave
     chromium
-    xdg-utils
+    dotnetCorePackages.sdk_9_0-bin
     (jetbrains.plugins.addPlugins jetbrains.rider [
       "github-copilot"
       "gittoolbox"
@@ -52,8 +52,9 @@
       "gittoolbox"
       "key-promoter-x"
     ])
-    dotnetCorePackages.sdk_9_0-bin
+    gh
     nodejs_22
+    xdg-utils
   ];
 
   programs.chromium = {
